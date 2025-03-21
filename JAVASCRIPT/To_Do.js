@@ -2,7 +2,7 @@ let tasklist = JSON.parse(localStorage.getItem("tasklist")) || []
 show()
 function show() {
     let htmlupdate = "";
-    for (let i = 0; i < tasklist.length; i++) {
+    tasklist.forEach((taskobj, index) => {
         let taskobj = tasklist[i]
         const { name, date } = taskobj
         const todo = `
@@ -14,7 +14,8 @@ function show() {
         " class="Delete_Button">Delete</button>`
         const final = todo
         htmlupdate += final
-    }
+
+    });
     document.querySelector('.Showcase')
         .innerHTML = `${htmlupdate}`
     console.log(htmlupdate);
