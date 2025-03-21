@@ -1,0 +1,14 @@
+.js-button  {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    border-radius: 40px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.js-button:active {
+    background-color: rgb(240, 240, 240);
+    color: black;
+}

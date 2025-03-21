@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="CSS/RPS.css">
+</head>
+
+<body>
+    <div class="full">
+        <h1 style="color:#ffffff">Rock Paper Scissors</h1>
+        <button onclick="
+    win_lose('Rocks')
+    " class="RPS"><span style="font-size: 100px;">&#9994;</span></button>
+        <button onclick="
+    win_lose('Paper')
+    " class="RPS"><span style='font-size:100px;'>&#9995;</span></button>
+        <button onclick="
+    win_lose('Scissors')
+    " class="RPS"><span style='font-size:100px;'>&#9996;</span></button>
+        <div class="mid">
+            <h2 class="result"></h2>
+            <h3 class="Move"></h3>
+            <p class="dicription"></p>
+            <button onclick="
+    reset();
+    localStorage.removeItem('point');
+
+    " class="Reset">Reset</button>
+    <button class="Auto" onclick="
+    
+    let val=document.querySelector('.Auto').innerHTML
+    autoplay()
+            if(val==='AutoPlay'){
+                document.querySelector('.Auto')
+                .innerHTML=`Stop`
+            }
+            else{
+                document.querySelector('.Auto')
+                .innerHTML=`AutoPlay`
+            }
+            
+    ">AutoPlay</button>
+        </div>
+    </div>
+    <script src="JAVASCRIPT/JS/RPS(2).js">
+    </script>
+
+</body>
+
+</html>

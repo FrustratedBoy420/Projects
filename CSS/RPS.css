@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.emonji {
+    font-size: 100px;
+}
+
+.dicription {
+    font-size: 20px;
+    font-weight: bold;
+}
+.RPS {
+    height: 150px;
+    width: 150px;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: black;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.RPS:hover {
+    height: 160px;
+    width: 160px;
+}
+
+.RPS:active {
+    background-color: white;
+}
+
+.Reset,
+.Auto {
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}

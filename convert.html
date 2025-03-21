@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert</title>
+</head>
+
+<body>
+    <h1>Convert The Unit</h1>
+
+    <p><b>Value</b></p>
+    <input placeholder="value" class="Value" type="number">
+    <p><b>Enter Initial Unit</b></p>
+    <input placeholder="Initial_unit" class="Initial_unit" type="text">
+    <p><b>Enter Final Unit</b></p>
+    <input placeholder="Final_unit" class="Final_unit" type="text">
+    <button onclick="
+        let value=Number(document.querySelector('.Value').value)
+        let ini=document.querySelector('.Initial_unit').value
+        let final=document.querySelector('.Final_unit').value
+        convert(value,ini,final);
+        console.log(value) 
+        ">Convert</button>
+    <p class="result"></p>
+    <script src="JAVASCRIPT/JS/convert.js">
+ </script>
+</body>
+
+</html>

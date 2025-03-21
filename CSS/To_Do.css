@@ -1,0 +1,89 @@
+/* .task {
+    height: 30px;
+    margin: 10px;
+}
+
+.day {
+    height: 30px;
+    width: 150px;
+    margin: 10px;
+}
+
+.add_button {
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.Delete_Button {
+    background-color: rgb(175, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    color: white;
+}
+
+.Work {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    padding: 1px 2px;
+    height: 30px;
+    width: 150px;
+}
+
+.Week {
+    text-align: center;
+    display: inline-block;
+    padding: 1px 10px;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+} */
+.Showcase,
+.Full {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+
+}
+
+.Showcase {
+    align-items: center;
+
+}
+
+.Work,
+.Week {
+    margin-left: 25%;
+}
+
+.Full {
+    margin-bottom: 10px;
+}
+
+.add_button {
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.task,
+.day {
+    padding: 6px;
+    font-size: 15px;
+}
+
+.Delete_Button {
+    background-color: darkred;
+    padding: 10px 0px;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
