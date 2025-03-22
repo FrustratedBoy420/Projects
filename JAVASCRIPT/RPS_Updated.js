@@ -90,6 +90,18 @@ function win_lose(playermove) {
     document.querySelector(".dicription")
         .innerHTML = `Wins:${point.win} Lose:${point.lose} Tie:${point.tie}`
 }
+document.querySelector('.Rock')
+    .addEventListener('click', () => {
+        win_lose('Rocks')
+    })
+document.querySelector('.Paper')
+    .addEventListener('click', () => {
+        win_lose('Paper')
+    })
+document.querySelector('.Scissors')
+    .addEventListener('click', () => {
+        win_lose('Scissors')
+    })
 function reset() {
     point.win = 0
     point.lose = 0
@@ -100,6 +112,10 @@ function reset() {
         .innerHTML = ``
     return point;
 }
+document.querySelector('.Reset')
+    .addEventListener('click', () => {
+        reset()
+    })
 let isautoplaying = false
 let setID;
 function autoplay() {
@@ -115,3 +131,28 @@ function autoplay() {
         isautoplaying = false
     }
 }
+document.querySelector('.Auto')
+    .addEventListener('click', () => {
+        let val = document.querySelector('.Auto').innerHTML
+        autoplay()
+        if (val === 'AutoPlay') {
+            document.querySelector('.Auto')
+                .innerHTML = `Stop`
+        }
+        else {
+            document.querySelector('.Auto')
+                .innerHTML = `AutoPlay`
+        }
+
+    })
+document.body.addEventListener("keydown", (event) => {
+    if (event.key == "r" || event.key == "R") {
+        win_lose("Rocks")
+    }
+    else if (event.key == "p" || event.key == "P") {
+        win_lose("Paper")
+    }
+    else if (event.key == "s" || event.key == "S") {
+        win_lose("Scissors")
+    }
+})

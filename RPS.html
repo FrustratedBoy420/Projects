@@ -11,15 +11,9 @@
 <body>
     <div class="full">
         <h1 style="color:#ffffff">Rock Paper Scissors</h1>
-        <button onclick="
-    win_lose('Rocks')
-    " class="RPS"><span style="font-size: 100px;">&#9994;</span></button>
-        <button onclick="
-    win_lose('Paper')
-    " class="RPS"><span style='font-size:100px;'>&#9995;</span></button>
-        <button onclick="
-    win_lose('Scissors')
-    " class="RPS"><span style='font-size:100px;'>&#9996;</span></button>
+        <button  class="RPS Rock"><span style="font-size: 100px;">&#9994;</span></button>
+        <button class="RPS Paper"><span style='font-size:100px;'>&#9995;</span></button>
+        <button class="RPS Scissors"><span style='font-size:100px;'>&#9996;</span></button>
         <div class="mid">
             <h2 class="result"></h2>
             <h3 class="Move"></h3>
@@ -29,20 +23,7 @@
     localStorage.removeItem('point');
 
     " class="Reset">Reset</button>
-    <button class="Auto" onclick="
-    
-    let val=document.querySelector('.Auto').innerHTML
-    autoplay()
-            if(val==='AutoPlay'){
-                document.querySelector('.Auto')
-                .innerHTML=`Stop`
-            }
-            else{
-                document.querySelector('.Auto')
-                .innerHTML=`AutoPlay`
-            }
-            
-    ">AutoPlay</button>
+    <button class="Auto">AutoPlay</button>
         </div>
     </div>
     <script src="JAVASCRIPT/RPS_Updated.js">

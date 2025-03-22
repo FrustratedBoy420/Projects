@@ -3,22 +3,25 @@ show()
 function show() {
     let htmlupdate = "";
     tasklist.forEach((taskobj, index) => {
-        let taskobj = tasklist[i]
         const { name, date } = taskobj
         const todo = `
+        <input type="Radio">
         <div class="Work">${name}</div>
         <div class="Week">${date} </div> 
-        <button onclick="
-                tasklist.splice(${i},1)
-                show()
-        " class="Delete_Button">Delete</button>`
+        <button class="Delete_Button">Delete</button>`
         const final = todo
         htmlupdate += final
 
     });
     document.querySelector('.Showcase')
         .innerHTML = `${htmlupdate}`
-    console.log(htmlupdate);
+    document.querySelectorAll('.Delete_Button')
+        .forEach((DeleteBut, index) => {
+            DeleteBut.addEventListener('click', () => {
+                tasklist.splice(index, 1)
+                show()
+            })
+        })
 
     localStorage.setItem("tasklist", JSON.stringify(tasklist))
 }
@@ -31,10 +34,12 @@ function add() {
             date: inputDay
         })
     }
-
-    console.log(typeof inputDay);
-
     document.querySelector('.task').value = ""
     document.querySelector('.day').value = ""
 }
+document.querySelector('.add_button')
+    .addEventListener('click', () => {
+        add()
+        show()
+    })
 
