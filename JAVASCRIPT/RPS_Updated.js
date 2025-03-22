@@ -156,3 +156,44 @@ document.body.addEventListener("keydown", (event) => {
         win_lose("Scissors")
     }
 })
+document.body.addEventListener("keydown", (event) => {
+    console.log(event.key)
+    if (event.key === "a" || event.key === "A") {
+
+        let val = document.querySelector('.Auto').innerHTML
+        autoplay()
+        if (val === 'AutoPlay') {
+            document.querySelector('.Auto')
+                .innerHTML = `Stop`
+        }
+        else {
+            document.querySelector('.Auto')
+                .innerHTML = `AutoPlay`
+        }
+    }
+})
+document.querySelector('.Reset')
+    .addEventListener('click', () => {
+        reset();
+        localStorage.removeItem('point');
+    })
+document.body.addEventListener("keydown", (event) => {
+    if (event.key == "Backspace") {
+        document.querySelector('.popup')
+            .innerHTML = `
+        <p>Do You Want To Reset <button class="yes">Yes</button><button class="no">No</button></p>
+        `
+        document.querySelector('.yes')
+            .addEventListener('click', () => {
+                reset();
+                localStorage.removeItem('point');
+                document.querySelector('.popup')
+                    .innerHTML = ``
+            })
+        document.querySelector('.no')
+            .addEventListener('click', () => {
+                document.querySelector('.popup')
+                    .innerHTML = ``
+            })
+    }
+})

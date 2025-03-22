@@ -11,20 +11,17 @@
 <body>
     <div class="full">
         <h1 style="color:#ffffff">Rock Paper Scissors</h1>
-        <button  class="RPS Rock"><span style="font-size: 100px;">&#9994;</span></button>
+        <button class="RPS Rock"><span style="font-size: 100px;">&#9994;</span></button>
         <button class="RPS Paper"><span style='font-size:100px;'>&#9995;</span></button>
         <button class="RPS Scissors"><span style='font-size:100px;'>&#9996;</span></button>
         <div class="mid">
             <h2 class="result"></h2>
             <h3 class="Move"></h3>
             <p class="dicription"></p>
-            <button onclick="
-    reset();
-    localStorage.removeItem('point');
-
-    " class="Reset">Reset</button>
-    <button class="Auto">AutoPlay</button>
+            <button class="Reset">Reset</button>
+            <button class="Auto">AutoPlay</button>
         </div>
+        <div class="popup"></div>
     </div>
     <script src="JAVASCRIPT/RPS_Updated.js">
     </script>
